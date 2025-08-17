@@ -1,0 +1,26 @@
+services:
+  bailey:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bailey:latest
+    container_name: bailey
+    ports:
+      - "9300:3000"
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:

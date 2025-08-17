@@ -1,0 +1,3 @@
+bailey.je {
+    reverse_proxy bailey:3000
+}
