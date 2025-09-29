@@ -16,7 +16,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Alex Bailey Consulting - Software Development Services",
+  title: "Bailey Solutions - Software Development Services",
   description:
     "Expert software development consulting services. Transforming ideas into innovative solutions for your business.",
   generator: "v0.app",
